@@ -26,4 +26,8 @@ public class TestingMinigame : MonoBehaviour
     {
         SceneManager.LoadScene("MiniGame2");
     }
+    public void Testing2()
+    {
+        SceneManager.LoadScene("TowerDefenseGame");
+    }
 }
