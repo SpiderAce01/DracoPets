@@ -30,4 +30,8 @@ public class TestingMinigame : MonoBehaviour
     {
         SceneManager.LoadScene("TowerDefenseGame");
     }
+    public void Testing3()
+    {
+        SceneManager.LoadScene("CrossyRoad");
+    }
 }
