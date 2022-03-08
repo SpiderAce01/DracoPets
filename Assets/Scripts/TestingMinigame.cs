@@ -5,16 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class TestingMinigame : MonoBehaviour
 {
+    public GameObject mGPanel;
+    public GameObject sPanel;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Testing()
@@ -33,5 +36,25 @@ public class TestingMinigame : MonoBehaviour
     public void Testing3()
     {
         SceneManager.LoadScene("CrossyRoad");
+    }
+
+    public void MiniGamePanel()
+    {
+        mGPanel.SetActive(true);
+    }
+
+    public void MGClose()
+    {
+        mGPanel.SetActive(false);
+    }
+
+    public void ShopPanel()
+    {
+        sPanel.SetActive(true);
+    }
+
+    public void SClose()
+    {
+        sPanel.SetActive(false);
     }
 }
