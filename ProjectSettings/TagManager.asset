@@ -6,6 +6,14 @@ TagManager:
   tags:
   - Car
   - CarBody
+  - Enemy
+  - Interact
+  - moneyHolder
+  - Dragon1
+  - Dragon2
+  - ring
+  - Dragon3
+  - Dragon4
   layers:
   - Default
   - TransparentFX

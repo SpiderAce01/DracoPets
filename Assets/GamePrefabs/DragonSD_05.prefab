@@ -1229,7 +1229,7 @@ GameObject:
   - component: {fileID: 6525565427088968723}
   m_Layer: 0
   m_Name: DragonSD_05
-  m_TagString: Untagged
+  m_TagString: Dragon3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1325,6 +1325,8 @@ MonoBehaviour:
   cooldown: 0
   d1: 0
   d2: 0
+  d3: 0
+  d4: 0
 --- !u!114 &3688128846038418378
 MonoBehaviour:
   m_ObjectHideFlags: 0

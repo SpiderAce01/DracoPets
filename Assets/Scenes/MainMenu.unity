@@ -193,8 +193,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Try interacting with your dragons by clicking on them!\n\n Also play mini-games
-    with them by clicking one of the options in the top left hand corner."
+  m_Text: "Try interacting with your dragons by clicking on them!\n\n Play Mini-Games
+    and get new dragons with the options in the bottom left corner."
 --- !u!222 &564248611
 CanvasRenderer:
   m_ObjectHideFlags: 0
