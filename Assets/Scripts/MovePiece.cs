@@ -10,6 +10,12 @@ public class MovePiece : MonoBehaviour
     public Vector3 originalPos;
     public ButtonController pC;
 
+    public AudioSource grabPiece;
+    public AudioSource placePiece;
+    public AudioSource wrongPiece;
+
+    public bool canPlay = true;
+
     void Start()
     {
 
@@ -19,6 +25,7 @@ public class MovePiece : MonoBehaviour
     {
         if (other.gameObject.tag == gameObject.tag)
         {
+            placePiece.Play();
             transform.position = other.gameObject.transform.position;
             pieceStatus = "locked";
             pC.pieceCounter++;
@@ -27,6 +34,8 @@ public class MovePiece : MonoBehaviour
 
     void OnMouseDown()
     {
+        grabPiece.Play();
+        canPlay = false;
         originalPos = transform.position;
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
     }
@@ -35,6 +44,8 @@ public class MovePiece : MonoBehaviour
     {
         if(pieceStatus != "locked")
         {
+            wrongPiece.Play();
+            canPlay = true;
             transform.position = originalPos;
         }
     }

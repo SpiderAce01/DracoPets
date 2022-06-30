@@ -16,6 +16,9 @@ public class MiniGameOne : MonoBehaviour
     public Animator anim;
     public MiniGameController control;
 
+    public AudioSource goRing;
+    public AudioSource hitRing;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -76,8 +79,17 @@ public class MiniGameOne : MonoBehaviour
     {
         if(other.tag == "ring")
         {
+            goRing.Play();
             money += 5;
             PlayerGold.instance.totalGold += 5;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "HitRing")
+        {
+            hitRing.Play();
         }
     }
 }

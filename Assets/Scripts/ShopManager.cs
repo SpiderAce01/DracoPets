@@ -16,6 +16,8 @@ public class ShopManager : MonoBehaviour
 
     public PlayerGold gold;
 
+    public AudioSource buyDragons;
+
     void Start()
     {
         
@@ -30,6 +32,7 @@ public class ShopManager : MonoBehaviour
     {
         if(gold.totalGold >= 100)
         {
+            buyDragons.Play();
             Instantiate(dragon1, spawnPoint.transform.position, spawnPoint.transform.rotation);
             gold.totalGold -= 100;
             d1.text = "SOLD";
@@ -41,6 +44,7 @@ public class ShopManager : MonoBehaviour
     {
         if (gold.totalGold >= 200)
         {
+            buyDragons.Play();
             Instantiate(dragon2, spawnPoint.transform.position, spawnPoint.transform.rotation);
             gold.totalGold -= 200;
             d2.text = "SOLD";
@@ -52,6 +56,7 @@ public class ShopManager : MonoBehaviour
     {
         if (gold.totalGold >= 300)
         {
+            buyDragons.Play();
             Instantiate(dragon3, spawnPoint.transform.position, spawnPoint.transform.rotation);
             gold.totalGold -= 300;
             d3.text = "SOLD";

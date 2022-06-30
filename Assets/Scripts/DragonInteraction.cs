@@ -88,6 +88,15 @@ public class DragonInteraction : MonoBehaviour
             if(showOptions == false)
             {
                 anim.SetInteger("choiceAnim", 0);
+
+                if (control.canWalk == true)
+                {
+                    control.aud.loop = true;
+                    control.aud.clip = control.walk;
+                    control.aud.volume = 0.2f;
+                    control.aud.Play();
+                    control.canWalk = false;
+                }
             }
         }
 
@@ -109,6 +118,15 @@ public class DragonInteraction : MonoBehaviour
             if (showOptions == false)
             {
                 anim.SetInteger("choiceAnim", 0);
+
+                if (control.canWalk == true)
+                {
+                    control.aud.loop = true;
+                    control.aud.clip = control.walk;
+                    control.aud.volume = 0.2f;
+                    control.aud.Play();
+                    control.canWalk = false;
+                }
             }
         }
 
@@ -124,6 +142,15 @@ public class DragonInteraction : MonoBehaviour
             if (showOptions == false)
             {
                 anim.SetInteger("choiceAnim", 0);
+
+                if (control.canWalk == true)
+                {
+                    control.aud.loop = true;
+                    control.aud.clip = control.walk;
+                    control.aud.volume = 0.2f;
+                    control.aud.Play();
+                    control.canWalk = false;
+                }
             }
         }
 
@@ -145,6 +172,15 @@ public class DragonInteraction : MonoBehaviour
             if (showOptions == false)
             {
                 anim.SetInteger("choiceAnim", 0);
+
+                if (control.canWalk == true)
+                {
+                    control.aud.loop = true;
+                    control.aud.clip = control.walk;
+                    control.aud.volume = 0.2f;
+                    control.aud.Play();
+                    control.canWalk = false;
+                }
             }
         }
     }

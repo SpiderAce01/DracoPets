@@ -44,7 +44,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.1
-  m_Speed: 1
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -70,6 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 4998579412101255579, guid: b1540aa01d1da4b40a7a2e7395d03585, type: 3}
   health: 1
+  die: {fileID: 0}
 --- !u!135 &1994077
 SphereCollider:
   m_ObjectHideFlags: 0
