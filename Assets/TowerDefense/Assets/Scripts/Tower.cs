@@ -10,6 +10,8 @@ public class Tower : MonoBehaviour
     public float damage = 1;
     [Range(0.1f,3f)]public float fireRate;
 
+    public AudioSource shoot;
+
     float count;
     //change later to an on trigger stay with more complexity for targeting many within range
     private void OnTriggerEnter(Collider other)
@@ -32,6 +34,7 @@ public class Tower : MonoBehaviour
             count += 1 * Time.deltaTime;
             if (count >= fireRate)
             {
+                //shoot.Play();
                 GameObject firedProjectile = Instantiate(projectilePrefab, transform);
                 firedProjectile.GetComponent<Projectile>().target = target;
                 firedProjectile.GetComponent<Projectile>().damage = damage;

@@ -16,6 +16,8 @@ public class TowerDefenseGameManager : MonoBehaviour
     public Text moneyTXT;
     public float kills;
     public Text killsTXT;
+    public AudioSource gameOverAud;
+    public bool canPlay = true;
 
     public GameObject gameOverScreen;
 
@@ -33,6 +35,11 @@ public class TowerDefenseGameManager : MonoBehaviour
         healthTXT.text = health.ToString();
         if(health <= 0)
         {
+            if(canPlay == true)
+            {
+                gameOverAud.Play();
+                canPlay = false;
+            }
             print("GAME OVER");
             gameOverScreen.SetActive(true);
             killsTXT.text = kills.ToString();

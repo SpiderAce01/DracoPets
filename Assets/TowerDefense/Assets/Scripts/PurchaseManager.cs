@@ -9,6 +9,7 @@ public class PurchaseManager : MonoBehaviour
 {
     public static PurchaseManager instance;
     public GameObject displayObject;
+    public AudioSource placeAud;
 
     private void Start()
     {
@@ -31,6 +32,7 @@ public class PurchaseManager : MonoBehaviour
                 }
                 if (Input.GetMouseButtonDown(0))
                 {
+                    placeAud.Play();
                     ConstructItem();
                 }
             }
