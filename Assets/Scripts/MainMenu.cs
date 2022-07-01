@@ -5,20 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    
-    void Start()
+    public GameObject instructionsPanel;
+
+    public void Quit()
     {
-        
+        Application.Quit();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SwapScene(string sceneToSwapTo)
     {
-        
+        SceneManager.LoadScene(sceneToSwapTo);
     }
 
-    public void StartGame()
+    public void ShowInstructions()
     {
-        SceneManager.LoadScene("DemoScene");
+        instructionsPanel.SetActive(true);
+    }
+
+    public void HideInstructions()
+    {
+        instructionsPanel.SetActive(false);
     }
 }

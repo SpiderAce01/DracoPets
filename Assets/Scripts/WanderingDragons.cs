@@ -91,7 +91,6 @@ public class WanderingDragons : MonoBehaviour
 
         if(audCheck >= 4)
         {
-            print("work");
 
             if (canChoose == true)
             {
