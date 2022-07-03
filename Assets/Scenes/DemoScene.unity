@@ -1017,7 +1017,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tower Defense!
+  m_Text: Dragon Run
 --- !u!222 &94618752
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2366,7 +2366,7 @@ GameObject:
   - component: {fileID: 243809994}
   - component: {fileID: 243809993}
   m_Layer: 5
-  m_Name: d1
+  m_Name: Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2438,7 +2438,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 97960554}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: BuyDragon1
+        m_MethodName: BuyDragon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5843,7 +5843,7 @@ GameObject:
   - component: {fileID: 642661618}
   - component: {fileID: 642661617}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Purple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6107,7 +6107,7 @@ GameObject:
   - component: {fileID: 666850790}
   - component: {fileID: 666850789}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Minigame Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7902,7 +7902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &846559682
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8205,7 +8205,7 @@ GameObject:
   - component: {fileID: 852298149}
   - component: {fileID: 852298148}
   m_Layer: 5
-  m_Name: d2
+  m_Name: Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8277,7 +8277,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 97960554}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: BuyDragon2
+        m_MethodName: BuyDragon1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8939,7 +8939,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Flying Dragon!
+  m_Text: Learn to Fly!
 --- !u!222 &896331626
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10077,7 +10077,7 @@ GameObject:
   - component: {fileID: 1042371605}
   - component: {fileID: 1042371604}
   m_Layer: 5
-  m_Name: d3
+  m_Name: Teal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10149,7 +10149,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 97960554}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: BuyDragon3
+        m_MethodName: BuyDragon2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16398,7 +16398,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Puzzle
+  m_Text: Find the Dragon
 --- !u!222 &1555758022
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20185,7 +20185,7 @@ GameObject:
   - component: {fileID: 1909357486}
   - component: {fileID: 1909357485}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: Shop Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

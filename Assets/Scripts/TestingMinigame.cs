@@ -31,7 +31,7 @@ public class TestingMinigame : MonoBehaviour
     }
     public void Testing2()
     {
-        SceneManager.LoadScene("TowerDefenseGame");
+        SceneManager.LoadScene("Runner Game");
     }
     public void Testing3()
     {

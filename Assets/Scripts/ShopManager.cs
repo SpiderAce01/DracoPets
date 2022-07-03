@@ -28,7 +28,7 @@ public class ShopManager : MonoBehaviour
         gold = PlayerGold.instance;
     }
 
-    public void BuyDragon1()
+    public void BuyDragon()
     {
         if(gold.totalGold >= 100)
         {
@@ -40,7 +40,7 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    public void BuyDragon2()
+    public void BuyDragon1()
     {
         if (gold.totalGold >= 200)
         {
@@ -52,7 +52,7 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    public void BuyDragon3()
+    public void BuyDragon2()
     {
         if (gold.totalGold >= 300)
         {
