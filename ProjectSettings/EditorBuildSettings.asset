@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Runner Game.unity
     guid: 37f89d07d40257847b93fa2b454e0d51
+  - enabled: 1
+    path: Assets/Scenes/Simon Says.unity
+    guid: 945add77cf7a1d84ebcf20f592a9dcfc
   m_configObjects: {}

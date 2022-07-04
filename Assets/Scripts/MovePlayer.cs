@@ -138,9 +138,11 @@ public class MovePlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print("A");
         if (other.tag == "Obstacle" && canDie)
         {
             Death(true);
+            print("B");
         }
 
         if(other.tag == "Fuel")

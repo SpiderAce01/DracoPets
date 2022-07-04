@@ -31,25 +31,34 @@ public class SimonSays : MonoBehaviour
 
     IEnumerator FlashButton()
     {
-        //this is wrong, it needs to keep the order, and add a new one onto it each time
         yield return new WaitForSeconds(1);
-       // clickOrder.Clear();
         streakText.text = currentStreak.ToString();
+        Button b = buttons[Random.Range(0, buttons.Length)];
+        clickOrder.Add(b);
         for (int i = 0; i < currentStreak; i++)
         {
-            Button b = buttons[Random.Range(0, buttons.Length)];
-            clickOrder.Add(b);
+            clickOrder[i].GetComponent<AudioSource>().Play();
 
-            b.GetComponent<AudioSource>().Play();
-            ColorBlock cb = b.colors;
-            cb.normalColor = b.colors.highlightedColor;
-            b.colors = cb;
+            clickOrder[i].interactable = false;
+
+            //ColorBlock cb = clickOrder[i].colors;
+
+            //cb.normalColor = Color.white;//clickOrder[i].colors.highlightedColor;
+            //clickOrder[i].colors = cb;
 
             yield return new WaitForSeconds(timeBetweenNotes);
-            ColorBlock cb2 = b.colors;
-            cb2.normalColor = b.colors.selectedColor;
-            b.colors = cb2;
+            clickOrder[i].interactable = true;
+            //cb = clickOrder[i].colors;
+            //cb.normalColor = clickOrder[i].colors.selectedColor;
+            //clickOrder[i].colors = cb;
+
+            yield return new WaitForSeconds(0.2f);
         }
+        //ColorBlock cb2 = b.colors;
+        //cb2.normalColor = b.colors.normalColor;
+        //b.colors = cb2;
+
+       // eventSystem.SetSelectedGameObject(null);
     }
 
     public void PressedButton()
@@ -59,20 +68,29 @@ public class SimonSays : MonoBehaviour
         b.GetComponent<AudioSource>().Play();
         if (playerOrder[step] != clickOrder[step])        
         {
-            print("WRONG");
-        }
-        step++;
-
-        if(playerOrder.Capacity == clickOrder.Capacity)
-        {
-            step = 0;
-            currentStreak++;
-            //eventSystem.SetSelectedGameObject(null);
-            ColorBlock cb2 = b.colors;
-            cb2.normalColor = b.colors.selectedColor;
-            b.colors = cb2;
+            clickOrder.Clear();
             playerOrder.Clear();
-            StartCoroutine(FlashButton());
+            step = 0;
+            currentStreak = 1;
+            StartCoroutine(FlashButton());            
         }
+        else
+        {
+            step++;
+
+            print(playerOrder.Count);
+            if (playerOrder.Count == currentStreak)
+            {
+                step = 0;
+                currentStreak++;
+                //eventSystem.SetSelectedGameObject(null);
+                //ColorBlock cb2 = b.colors;
+                //cb2.normalColor = b.colors.selectedColor;
+                // b.colors = cb2;
+                playerOrder.Clear();
+                StartCoroutine(FlashButton());
+            }
+        }
+        
     }
 }

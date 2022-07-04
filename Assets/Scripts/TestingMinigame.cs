@@ -35,7 +35,7 @@ public class TestingMinigame : MonoBehaviour
     }
     public void Testing3()
     {
-        SceneManager.LoadScene("CrossyRoad");
+        SceneManager.LoadScene("Simon Says");
     }
 
     public void MiniGamePanel()
