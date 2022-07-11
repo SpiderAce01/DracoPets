@@ -120,7 +120,7 @@ public class MovePlayer : MonoBehaviour
         if (crashed)
             deathMessage.text = "CRASHED";
         else
-            deathMessage.text = "OUT OF FUEL";
+            deathMessage.text = "OUT OF ENERGY";
 
         finalScore.text = ScoreTracker.instance.score.ToString() + " M";
         highScoreText.text = PlayerPrefs.GetInt("highscore") + " M";
@@ -138,11 +138,9 @@ public class MovePlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("A");
         if (other.tag == "Obstacle" && canDie)
         {
             Death(true);
-            print("B");
         }
 
         if(other.tag == "Fuel")

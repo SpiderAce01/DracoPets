@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f96c5541ec874cb4ea42f6bc6474c3ac
+guid: 95d13e7d153a52a41b0122cd4a38ce46
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
@@ -309,7 +309,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.36821705
-        functionName: NewEvent
+        functionName: PlaySound
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

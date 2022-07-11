@@ -2620,6 +2620,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fuel Pickup
       objectReference: {fileID: 0}
+    - target: {fileID: 4576644485479853965, guid: dd0b8840963163545b70e9acb1860768, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576644485499632453, guid: dd0b8840963163545b70e9acb1860768, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2673494347129451550, guid: 70e3e7a756a1a3641947fe84ef09bb90, type: 3}
     - target: {fileID: 5763108987658917588, guid: dd0b8840963163545b70e9acb1860768, type: 3}
       propertyPath: m_RootOrder
       value: 4

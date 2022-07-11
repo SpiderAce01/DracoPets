@@ -6,7 +6,21 @@ using UnityEngine.EventSystems;
 
 public class SimonSays : MonoBehaviour
 {
-    public Button[] buttons;
+    #region Singleton
+    public static SimonSays instance;
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("More than one instance of SimonSays found");
+            return;
+        }
+        instance = this;
+    }
+    #endregion
+
+    public ClickOnDragon[] dragons;
 
     public Text streakText;
 
@@ -15,8 +29,9 @@ public class SimonSays : MonoBehaviour
     //this should be at 1 at the start of the game
     public int currentStreak = 1;
 
-    public List<Button> clickOrder;
-    public List<Button> playerOrder;
+    public List<ClickOnDragon> clickOrder;
+    public List<ClickOnDragon> playerOrder;
+    public bool canClick;
 
     EventSystem eventSystem;
 
@@ -31,66 +46,53 @@ public class SimonSays : MonoBehaviour
 
     IEnumerator FlashButton()
     {
-        yield return new WaitForSeconds(1);
+        canClick = false;   
+        yield return new WaitForSeconds(timeBetweenNotes);
         streakText.text = currentStreak.ToString();
-        Button b = buttons[Random.Range(0, buttons.Length)];
-        clickOrder.Add(b);
+        ClickOnDragon d = dragons[Random.Range(0, dragons.Length)];
+        clickOrder.Add(d);
         for (int i = 0; i < currentStreak; i++)
         {
-            clickOrder[i].GetComponent<AudioSource>().Play();
-
-            clickOrder[i].interactable = false;
-
-            //ColorBlock cb = clickOrder[i].colors;
-
-            //cb.normalColor = Color.white;//clickOrder[i].colors.highlightedColor;
-            //clickOrder[i].colors = cb;
+            clickOrder[i].GetComponent<Animator>().SetBool("Roar", true);
 
             yield return new WaitForSeconds(timeBetweenNotes);
-            clickOrder[i].interactable = true;
-            //cb = clickOrder[i].colors;
-            //cb.normalColor = clickOrder[i].colors.selectedColor;
-            //clickOrder[i].colors = cb;
 
-            yield return new WaitForSeconds(0.2f);
+            clickOrder[i].GetComponent<Animator>().SetBool("Roar", false);
+            yield return new WaitForSeconds(0.5f);
         }
-        //ColorBlock cb2 = b.colors;
-        //cb2.normalColor = b.colors.normalColor;
-        //b.colors = cb2;
-
-       // eventSystem.SetSelectedGameObject(null);
+        canClick = true;
     }
 
-    public void PressedButton()
+    public void PressedDragon(int ID)
     {
-        Button b = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
-        playerOrder.Add(b);
-        b.GetComponent<AudioSource>().Play();
-        if (playerOrder[step] != clickOrder[step])        
+        if (canClick)
         {
-            clickOrder.Clear();
-            playerOrder.Clear();
-            step = 0;
-            currentStreak = 1;
-            StartCoroutine(FlashButton());            
-        }
-        else
-        {
-            step++;
+            ClickOnDragon d = dragons[ID];
+            playerOrder.Add(d);
 
-            print(playerOrder.Count);
-            if (playerOrder.Count == currentStreak)
+            if (playerOrder[step] != clickOrder[step])
             {
-                step = 0;
-                currentStreak++;
-                //eventSystem.SetSelectedGameObject(null);
-                //ColorBlock cb2 = b.colors;
-                //cb2.normalColor = b.colors.selectedColor;
-                // b.colors = cb2;
+                clickOrder.Clear();
                 playerOrder.Clear();
+                step = 0;
+                currentStreak = 1;
                 StartCoroutine(FlashButton());
             }
+            else
+            {
+                step++;
+
+                print(playerOrder.Count);
+                if (playerOrder.Count == currentStreak)
+                {
+                    step = 0;
+                    currentStreak++;
+                    playerOrder.Clear();
+                    StartCoroutine(FlashButton());
+                }
+            }
         }
-        
+        //d.GetComponent<Animator>().SetBool("Roar", false);
+
     }
 }
