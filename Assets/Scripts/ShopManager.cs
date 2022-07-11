@@ -18,9 +18,11 @@ public class ShopManager : MonoBehaviour
 
     public AudioSource buyDragons;
 
+    public static ShopManager instance;
+
     void Start()
     {
-        
+        instance = this;
     }
 
     void Update()
@@ -37,6 +39,7 @@ public class ShopManager : MonoBehaviour
             gold.totalGold -= 100;
             d1.text = "SOLD";
             d1.transform.parent.GetComponent<Button>().interactable = false;
+            DragonKeeper.instance.dragon1 = dragon1;
         }
     }
 
@@ -49,6 +52,7 @@ public class ShopManager : MonoBehaviour
             gold.totalGold -= 200;
             d2.text = "SOLD";
             d2.transform.parent.GetComponent<Button>().interactable = false;
+            DragonKeeper.instance.dragon2 = dragon2;
         }
     }
 
@@ -61,6 +65,7 @@ public class ShopManager : MonoBehaviour
             gold.totalGold -= 300;
             d3.text = "SOLD";
             d3.transform.parent.GetComponent<Button>().interactable = false;
+            DragonKeeper.instance.dragon3 = dragon3;
         }
     }
 }
