@@ -20,6 +20,9 @@ public class ShopManager : MonoBehaviour
 
     public static ShopManager instance;
 
+    public GameObject[] shops;
+    public GameObject[] foodPrefabs;
+
     void Start()
     {
         instance = this;
@@ -66,6 +69,25 @@ public class ShopManager : MonoBehaviour
             d3.text = "SOLD";
             d3.transform.parent.GetComponent<Button>().interactable = false;
             DragonKeeper.instance.dragon3 = dragon3;
+        }
+    }
+
+    public void ChangeShop(int id)
+    {
+        for (int i = 0; i < shops.Length; i++)
+        {
+            shops[i].SetActive(false);
+        }
+
+        shops[id].SetActive(true);
+    }
+
+    public void BuyFood(GameObject prefab)
+    {
+        if(gold.totalGold >= prefab.GetComponent<FoodPiece>().cost)
+        {
+            gold.totalGold -= prefab.GetComponent<FoodPiece>().cost;
+            Instantiate(prefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
         }
     }
 }
