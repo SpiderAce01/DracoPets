@@ -8,6 +8,8 @@ public class ButtonController : MonoBehaviour
 {
     public GameObject startPanel;
     public GameObject endPanel;
+    public GameObject pieces1;
+    public GameObject pieces2;
 
     public AudioSource timerAud;
     public AudioSource winAud;
@@ -75,6 +77,25 @@ public class ButtonController : MonoBehaviour
     {
         startPanel.SetActive(false);
         started = true;
+    }
+
+    public void NextGame()
+    {
+        if(pieces1.activeInHierarchy == true)
+        {
+            pieceCounter = 0;
+            playing = 0;
+            pieces1.SetActive(false);
+            endPanel.SetActive(false);
+            timer = 0;
+            pieces2.SetActive(true);
+            time.gameObject.SetActive(true);
+            givenReward = false;
+        }
+        else
+        {
+            PlayAgain();
+        }
     }
 
     public void PlayAgain()

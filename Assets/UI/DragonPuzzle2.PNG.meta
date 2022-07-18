@@ -1,0 +1,600 @@
+fileFormatVersion: 2
+guid: c37496cc3d727f240a2bb032c7241d65
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5565520121812506002
+    second: DragonPuzzle2_0
+  - first:
+      213: -8304511459937153261
+    second: DragonPuzzle2_1
+  - first:
+      213: 9105415181560182189
+    second: DragonPuzzle2_2
+  - first:
+      213: 4606624062856498430
+    second: DragonPuzzle2_3
+  - first:
+      213: -7848505536799862019
+    second: DragonPuzzle2_4
+  - first:
+      213: 389132045570441714
+    second: DragonPuzzle2_5
+  - first:
+      213: -564478793264820406
+    second: DragonPuzzle2_6
+  - first:
+      213: -2967980362532392387
+    second: DragonPuzzle2_7
+  - first:
+      213: -1078338231061645612
+    second: DragonPuzzle2_8
+  - first:
+      213: 1658975287337281256
+    second: DragonPuzzle2_9
+  - first:
+      213: 4460603189437077520
+    second: DragonPuzzle2_10
+  - first:
+      213: 4323739743979952857
+    second: DragonPuzzle2_11
+  - first:
+      213: -7106059448719656375
+    second: DragonPuzzle2_12
+  - first:
+      213: 3345134521251836153
+    second: DragonPuzzle2_13
+  - first:
+      213: 2134691123994756745
+    second: DragonPuzzle2_14
+  - first:
+      213: -2131608261916339211
+    second: DragonPuzzle2_15
+  - first:
+      213: 7408197464550110555
+    second: DragonPuzzle2_16
+  - first:
+      213: -3920009829153304021
+    second: DragonPuzzle2_17
+  - first:
+      213: -3883762315864074422
+    second: DragonPuzzle2_18
+  - first:
+      213: -1837630264951787110
+    second: DragonPuzzle2_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DragonPuzzle2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 548.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2955cea3013bc3d40800000000000000
+      internalID: 5565520121812506002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_1
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 548.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f094d83d270cc80800000000000000
+      internalID: -8304511459937153261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_2
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 548.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5f7557ddeec5e70800000000000000
+      internalID: 9105415181560182189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_3
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 548.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc0450ad240eef30800000000000000
+      internalID: 4606624062856498430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 411.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df29b552cc1841390800000000000000
+      internalID: -7848505536799862019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_5
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 411.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f182f2a889766500800000000000000
+      internalID: 389132045570441714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_6
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 411.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f853c37819a28f0800000000000000
+      internalID: -564478793264820406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_7
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 411.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32fbe6d59d9fc6d0800000000000000
+      internalID: -2967980362532392387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 274.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6f8d59719f801f0800000000000000
+      internalID: -1078338231061645612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_9
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 274.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e6e3e4fb3dd50710800000000000000
+      internalID: 1658975287337281256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_10
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 274.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0181f5ea7fe37ed30800000000000000
+      internalID: 4460603189437077520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_11
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 274.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dad9259362010c30800000000000000
+      internalID: 4323739743979952857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 137.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ab146b494326d90800000000000000
+      internalID: -7106059448719656375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_13
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 137.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0bc11bf1e4c6e20800000000000000
+      internalID: 3345134521251836153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_14
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 137.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98603e66442ff9d10800000000000000
+      internalID: 2134691123994756745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_15
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 137.8
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3503c54910b62e0800000000000000
+      internalID: -2131608261916339211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.80000305
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55757cf7543fc660800000000000000
+      internalID: 7408197464550110555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_17
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 0.80000305
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22174954d35999c0800000000000000
+      internalID: -3920009829153304021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_18
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0.80000305
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a479fd230ca1a1ac0800000000000000
+      internalID: -3883762315864074422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonPuzzle2_19
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 0.80000305
+        width: 138.5
+        height: 137.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91ba0d920d6f76e0800000000000000
+      internalID: -1837630264951787110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b19b72b555e6ac746ba6553a6febb7f7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
