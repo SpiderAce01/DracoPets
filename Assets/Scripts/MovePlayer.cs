@@ -23,6 +23,8 @@ public class MovePlayer : MonoBehaviour
     public Text finalScore;
     public Text highScoreText;
 
+    public GameObject instructionsPanel;
+
     Rigidbody rb;
 
     void Start()
@@ -33,6 +35,7 @@ public class MovePlayer : MonoBehaviour
         }
         else
         {
+
         }
         currentFuel = maxFuel;
 
@@ -147,5 +150,11 @@ public class MovePlayer : MonoBehaviour
         {
             AddFuel();
         }
+    }
+
+    public void HideInstructions()
+    {
+        instructionsPanel.SetActive(false);
+        this.enabled = true;
     }
 }

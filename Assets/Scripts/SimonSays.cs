@@ -33,6 +33,8 @@ public class SimonSays : MonoBehaviour
     public List<ClickOnDragon> playerOrder;
     public bool canClick;
 
+    public GameObject instructionsPanel;
+
     EventSystem eventSystem;
 
 
@@ -41,7 +43,7 @@ public class SimonSays : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(FlashButton());
+        instructionsPanel.SetActive(true);
     }
 
     IEnumerator FlashButton()
@@ -94,5 +96,11 @@ public class SimonSays : MonoBehaviour
         }
         //d.GetComponent<Animator>().SetBool("Roar", false);
 
+    }
+
+    public void HideInstructions()
+    {
+        instructionsPanel.SetActive(false);
+        StartCoroutine(FlashButton());
     }
 }
