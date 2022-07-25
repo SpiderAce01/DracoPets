@@ -23,6 +23,9 @@ public class SimonSays : MonoBehaviour
     public ClickOnDragon[] dragons;
 
     public Text streakText;
+    public Text goldEarnedText;
+
+    int goldEarned;
 
     public float timeBetweenNotes;
 
@@ -35,6 +38,8 @@ public class SimonSays : MonoBehaviour
 
     public GameObject instructionsPanel;
 
+    public AudioClip dingSound, errSound;
+
     EventSystem eventSystem;
 
 
@@ -46,10 +51,20 @@ public class SimonSays : MonoBehaviour
         instructionsPanel.SetActive(true);
     }
 
-    IEnumerator FlashButton()
+    IEnumerator FlashButton(int soundToPlay)
     {
         canClick = false;   
         yield return new WaitForSeconds(timeBetweenNotes);
+        if (soundToPlay == 1)
+        {
+            GetComponent<AudioSource>().clip = dingSound;
+            GetComponent<AudioSource>().Play();
+        }
+        if (soundToPlay == 2)
+        {
+            GetComponent<AudioSource>().clip = errSound;
+            GetComponent<AudioSource>().Play();
+        }
         streakText.text = currentStreak.ToString();
         ClickOnDragon d = dragons[Random.Range(0, dragons.Length)];
         clickOrder.Add(d);
@@ -78,19 +93,22 @@ public class SimonSays : MonoBehaviour
                 playerOrder.Clear();
                 step = 0;
                 currentStreak = 1;
-                StartCoroutine(FlashButton());
+                StartCoroutine(FlashButton(2));
             }
             else
             {
                 step++;
-
-                print(playerOrder.Count);
+                
                 if (playerOrder.Count == currentStreak)
                 {
                     step = 0;
                     currentStreak++;
                     playerOrder.Clear();
-                    StartCoroutine(FlashButton());
+                    if(PlayerGold.instance != null)
+                    PlayerGold.instance.totalGold += 1;
+                    goldEarned += 1;
+                    goldEarnedText.text = "Gold Earned: " + goldEarned;
+                    StartCoroutine(FlashButton(1));
                 }
             }
         }
@@ -101,6 +119,6 @@ public class SimonSays : MonoBehaviour
     public void HideInstructions()
     {
         instructionsPanel.SetActive(false);
-        StartCoroutine(FlashButton());
+        StartCoroutine(FlashButton(0));
     }
 }

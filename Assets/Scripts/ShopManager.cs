@@ -86,6 +86,7 @@ public class ShopManager : MonoBehaviour
     {
         if(gold.totalGold >= prefab.GetComponent<FoodPiece>().cost)
         {
+            buyDragons.Play();
             gold.totalGold -= prefab.GetComponent<FoodPiece>().cost;
             Instantiate(prefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
         }

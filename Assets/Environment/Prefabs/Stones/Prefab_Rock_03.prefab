@@ -91,7 +91,7 @@ MeshCollider:
   m_GameObject: {fileID: 792480924344431929}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -106,6 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1269100363895396697}
   - component: {fileID: 1868816381509095325}
+  - component: {fileID: 9190491796437478655}
   m_Layer: 0
   m_Name: Prefab_Rock_03
   m_TagString: Obstacle
@@ -157,6 +158,20 @@ LODGroup:
     renderers:
     - renderer: {fileID: 819638513929078462}
   m_Enabled: 0
+--- !u!64 &9190491796437478655
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866428834291067722}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &2874543328801614787
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +359,7 @@ MeshCollider:
   m_GameObject: {fileID: 8360341843431686282}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30

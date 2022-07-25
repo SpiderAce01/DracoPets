@@ -15,8 +15,18 @@ public class DragonKeeper : MonoBehaviour
     
     void Start()
     {
-        instance = this;
+        //instance = this;
         DontDestroyOnLoad(this.gameObject);
+
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Update()
@@ -28,10 +38,11 @@ public class DragonKeeper : MonoBehaviour
     {
         if(level == 1)
         {
+
             spawnPoint = GameObject.FindGameObjectWithTag("Interact");
             if(dragon1 != null)
             {
-                //ShopManager.instance.d1.text = "SOLD";
+               //ShopManager.instance.d1.text = "SOLD";
                 //ShopManager.instance.d1.transform.parent.GetComponent<Button>().interactable = false;
                 Instantiate(dragon1, spawnPoint.transform.position, spawnPoint.transform.rotation);
             }
