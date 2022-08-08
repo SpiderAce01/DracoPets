@@ -9,7 +9,7 @@ public class FoodPiece : MonoBehaviour
 
     void Start()
     {
-        GameObject.FindGameObjectWithTag(lovedBy).GetComponent<WanderingDragons>().LookForFood(gameObject);
+       // GameObject.FindGameObjectWithTag(lovedBy).GetComponent<WanderingDragons>().LookForFood(gameObject);
     }
     void Update()
     {

@@ -1087,9 +1087,11 @@ MonoBehaviour:
   wanderRadius: 7
   wanderTimer: 4
   animRand: 0
+  faveFoodTag: Cheese
   canChoose: 1
   canPlay: 1
   canWalk: 1
+  isEating: 0
   anim: {fileID: 4843978563935274643}
   aud: {fileID: 0}
   eating: {fileID: 8300000, guid: f93276ff7133c8a4a8c338dbf6db099c, type: 3}

@@ -44,6 +44,7 @@ public class ShopManager : MonoBehaviour
             d1.text = "SOLD";
             d1.transform.parent.GetComponent<Button>().interactable = false;
             DragonKeeper.instance.dragon1 = dragon1;
+            this.gameObject.SetActive(false);
         }
     }
 
@@ -57,6 +58,7 @@ public class ShopManager : MonoBehaviour
             d2.text = "SOLD";
             d2.transform.parent.GetComponent<Button>().interactable = false;
             DragonKeeper.instance.dragon2 = dragon2;
+            this.gameObject.SetActive(false);
         }
     }
 
@@ -70,6 +72,7 @@ public class ShopManager : MonoBehaviour
             d3.text = "SOLD";
             d3.transform.parent.GetComponent<Button>().interactable = false;
             DragonKeeper.instance.dragon3 = dragon3;
+            this.gameObject.SetActive(false);
         }
     }
 
@@ -90,6 +93,7 @@ public class ShopManager : MonoBehaviour
             buyDragons.Play();
             gold.totalGold -= prefab.GetComponent<FoodPiece>().cost;
             Instantiate(prefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
+            this.gameObject.SetActive(false);
         }
     }
 }

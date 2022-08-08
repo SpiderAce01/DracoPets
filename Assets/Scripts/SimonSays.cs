@@ -37,6 +37,7 @@ public class SimonSays : MonoBehaviour
     public bool canClick;
 
     public GameObject instructionsPanel;
+    public GameObject waitPanel;
 
     public AudioClip dingSound, errSound;
 
@@ -53,7 +54,8 @@ public class SimonSays : MonoBehaviour
 
     IEnumerator FlashButton(int soundToPlay)
     {
-        canClick = false;   
+        canClick = false;
+        waitPanel.SetActive(true);
         yield return new WaitForSeconds(timeBetweenNotes);
         if (soundToPlay == 1)
         {
@@ -78,6 +80,8 @@ public class SimonSays : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
         canClick = true;
+
+        waitPanel.SetActive(false);
     }
 
     public void PressedDragon(int ID)

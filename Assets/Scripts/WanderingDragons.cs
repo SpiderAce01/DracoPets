@@ -46,6 +46,8 @@ public class WanderingDragons : MonoBehaviour
     {
         if (!isEating)
         {
+            if (GameObject.FindGameObjectWithTag(faveFoodTag) != null)
+                LookForFood(GameObject.FindGameObjectWithTag(faveFoodTag));
             timer += Time.deltaTime;
 
             if (timer >= wanderTimer)
@@ -95,7 +97,7 @@ public class WanderingDragons : MonoBehaviour
     {
         audCheck++;
 
-        if(audCheck >= 4)
+        if (audCheck >= 4)
         {
 
             if (canChoose == true)
@@ -143,14 +145,28 @@ public class WanderingDragons : MonoBehaviour
     public void LookForFood(GameObject foodPrefab)
     {
         isEating = true;
+        anim.SetInteger("choiceAnim", 0);
         agent.SetDestination(foodPrefab.transform.position);
+            print("A");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == faveFoodTag)
+        if (other.tag == faveFoodTag)
         {
             other.transform.GetChild(0).GetComponent<ParticleSystem>().Play();
+            anim.SetInteger("choiceAnim", 3);
+            StartCoroutine(EatFood(other.gameObject));
+            print(GameObject.FindGameObjectWithTag(faveFoodTag).name);
+
         }
+    }
+
+    IEnumerator EatFood(GameObject food)
+    {
+        yield return new WaitForSeconds(2);
+
+        Destroy(food);
+        isEating = false;
     }
 }
