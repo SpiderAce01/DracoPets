@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5267254, g: 0.22316661, b: 0.5566038, a: 1}
+  m_Color: {r: 0.71273136, g: 0.45376468, b: 0.9716981, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -181,7 +181,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3637b29c2ebf9c041b96cacaf52ab5fc, type: 3}
+    m_Font: {fileID: 12800000, guid: b05f2c5a238f1d849a0f0f6053934318, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Try interacting with your dragons by clicking on them!\n\n Play Mini-Games
+  m_Text: "Try interacting with your dragons by clicking on them!\n\n Play mini-games
     and get new dragons with the options in the bottom left corner."
 --- !u!222 &564248611
 CanvasRenderer:
