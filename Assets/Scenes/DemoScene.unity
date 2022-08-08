@@ -1044,7 +1044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &97960553
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1083,6 +1083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31514a75fee98ee4d90348e62a738407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragon0: {fileID: 0}
   dragon1: {fileID: 4843978563925931329, guid: c254dfff448f36045abd55a37dd29f38, type: 3}
   dragon2: {fileID: 2175040544560874603, guid: fcb2636adcd965b43828cc836fbbebe7, type: 3}
   dragon3: {fileID: 8369079014942938828, guid: d2dfb26a6973eb3478871b70fad2189c, type: 3}
@@ -2546,10 +2547,10 @@ RectTransform:
   m_Father: {fileID: 936197454}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 660, y: -135}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &243809993
 MonoBehaviour:
@@ -6375,10 +6376,10 @@ RectTransform:
   m_Father: {fileID: 936197454}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 450, y: -135}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &642661617
 MonoBehaviour:
@@ -9216,10 +9217,10 @@ RectTransform:
   m_Father: {fileID: 936197454}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 450, y: -345}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852298148
 MonoBehaviour:
@@ -11382,10 +11383,10 @@ RectTransform:
   m_Father: {fileID: 936197454}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 660, y: -345}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1042371604
 MonoBehaviour:
@@ -15616,7 +15617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a877f5171bfce4ebf4d0cdba1d1571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalGold: 0
+  totalGold: 100
 --- !u!4 &1357330851
 Transform:
   m_ObjectHideFlags: 0
@@ -24555,6 +24556,10 @@ PrefabInstance:
       propertyPath: eating
       value: 
       objectReference: {fileID: 8300000, guid: f93276ff7133c8a4a8c338dbf6db099c, type: 3}
+    - target: {fileID: 5865693227954437716, guid: 90d0913a8eda24942b230fb5c9c0cde5, type: 3}
+      propertyPath: faveFoodTag
+      value: Apple
+      objectReference: {fileID: 0}
     - target: {fileID: 7766264321374736876, guid: 90d0913a8eda24942b230fb5c9c0cde5, type: 3}
       propertyPath: anim
       value: 

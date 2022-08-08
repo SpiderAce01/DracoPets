@@ -10,9 +10,12 @@ public class WanderingDragons : MonoBehaviour
     public int animRand;
     private int audCheck;
 
+    public string faveFoodTag;
+
     public bool canChoose = true;
     public bool canPlay = true;
     public bool canWalk = true;
+    public bool isEating = false;
 
     private Transform target;
     private NavMeshAgent agent;
@@ -41,34 +44,37 @@ public class WanderingDragons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-
-        if (timer >= wanderTimer)
+        if (!isEating)
         {
-            Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
-            agent.SetDestination(newPos);
-            timer = 0;
-        }
+            timer += Time.deltaTime;
 
-        if ((Mathf.Approximately(agent.velocity.x, 0) && Mathf.Approximately(agent.velocity.y, 0) && Mathf.Approximately(agent.velocity.z, 0)))
-        {
-            AnimationController();
-            canWalk = true;
-        }
-        else
-        {
-            anim.SetInteger("choiceAnim", 0);
-
-            if (canWalk == true)
+            if (timer >= wanderTimer)
             {
-                aud.loop = true;
-                aud.clip = walk;
-                aud.volume = 0.2f;
-                aud.Play();
-                canWalk = false;
+                Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
+                agent.SetDestination(newPos);
+                timer = 0;
             }
 
-            canChoose = true;
+            if ((Mathf.Approximately(agent.velocity.x, 0) && Mathf.Approximately(agent.velocity.y, 0) && Mathf.Approximately(agent.velocity.z, 0)))
+            {
+                AnimationController();
+                canWalk = true;
+            }
+            else
+            {
+                anim.SetInteger("choiceAnim", 0);
+
+                if (canWalk == true)
+                {
+                    aud.loop = true;
+                    aud.clip = walk;
+                    aud.volume = 0.2f;
+                    aud.Play();
+                    canWalk = false;
+                }
+
+                canChoose = true;
+            }
         }
     }
 
@@ -131,6 +137,20 @@ public class WanderingDragons : MonoBehaviour
                     }
                     break;
             }
+        }
+    }
+
+    public void LookForFood(GameObject foodPrefab)
+    {
+        isEating = true;
+        agent.SetDestination(foodPrefab.transform.position);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == faveFoodTag)
+        {
+            other.transform.GetChild(0).GetComponent<ParticleSystem>().Play();
         }
     }
 }

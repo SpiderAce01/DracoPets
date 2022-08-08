@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
+    public GameObject dragon0;
     public GameObject dragon1;
     public GameObject dragon2;
     public GameObject dragon3;
