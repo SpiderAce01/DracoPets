@@ -10,6 +10,8 @@ public class WanderingDragons : MonoBehaviour
     public int animRand;
     private int audCheck;
 
+    public int cost;
+
     public string faveFoodTag;
 
     public bool canChoose = true;
@@ -27,6 +29,9 @@ public class WanderingDragons : MonoBehaviour
     public AudioClip eating;
     public AudioClip roar;
     public AudioClip walk;
+
+    [Multiline]
+    public string info;
 
     private void Start()
     {
@@ -147,7 +152,6 @@ public class WanderingDragons : MonoBehaviour
         isEating = true;
         anim.SetInteger("choiceAnim", 0);
         agent.SetDestination(foodPrefab.transform.position);
-            print("A");
     }
 
     private void OnTriggerEnter(Collider other)

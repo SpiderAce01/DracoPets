@@ -1562,7 +1562,7 @@ GameObject:
   - component: {fileID: 7833867451118979899}
   - component: {fileID: -1070382802929902186}
   m_Layer: 0
-  m_Name: DragonSD_06
+  m_Name: Starry
   m_TagString: Dragon1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1686,6 +1686,7 @@ MonoBehaviour:
   eating: {fileID: 8300000, guid: f93276ff7133c8a4a8c338dbf6db099c, type: 3}
   roar: {fileID: 8300000, guid: 67147230ae8d3ce47b728885afea9544, type: 3}
   walk: {fileID: 8300000, guid: af30a93e7b1a31045a7b15cf54ea2978, type: 3}
+  info: Star Dragons wander around the cosmos, but can't say no to a tasty apple!
 --- !u!195 &7833867451118979899
 NavMeshAgent:
   m_ObjectHideFlags: 0

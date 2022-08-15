@@ -1229,7 +1229,7 @@ GameObject:
   - component: {fileID: 6525565427088968723}
   - component: {fileID: 8612345284614904537}
   m_Layer: 0
-  m_Name: DragonSD_05
+  m_Name: Spike
   m_TagString: Dragon3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1343,6 +1343,7 @@ MonoBehaviour:
   wanderRadius: 7
   wanderTimer: 4
   animRand: 0
+  cost: 200
   faveFoodTag: Meat
   canChoose: 1
   canPlay: 1
@@ -1353,6 +1354,8 @@ MonoBehaviour:
   eating: {fileID: 8300000, guid: f93276ff7133c8a4a8c338dbf6db099c, type: 3}
   roar: {fileID: 8300000, guid: 214b5b6f430115f4da5a306b4a25b7e9, type: 3}
   walk: {fileID: 8300000, guid: af30a93e7b1a31045a7b15cf54ea2978, type: 3}
+  info: Night Dragons are elusive and stealthy. They're best suited to eating slabs
+    of raw meat!
 --- !u!195 &6525565427088968723
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -5,15 +5,17 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
-    public GameObject dragon0;
-    public GameObject dragon1;
-    public GameObject dragon2;
-    public GameObject dragon3;
+    public GameObject[] dragons;
+    public GameObject selectedDragon;
     public GameObject spawnPoint;
 
     public Text d1;
     public Text d2;
     public Text d3;
+
+    public GameObject infoPanel;
+    public Text nameText, infoText;
+    public Button buyButton;
 
     public PlayerGold gold;
 
@@ -34,44 +36,53 @@ public class ShopManager : MonoBehaviour
         gold = PlayerGold.instance;
     }
 
+    private void OnEnable()
+    {
+        if (DragonKeeper.instance.ownedDragons.Contains(dragons[1]))
+        {
+            d1.text = "SOLD";
+        }
+
+        if (DragonKeeper.instance.ownedDragons.Contains(dragons[2]))
+        {
+            d2.text = "SOLD";
+        }
+
+        if (DragonKeeper.instance.ownedDragons.Contains(dragons[3]))
+        {
+            d3.text = "SOLD";
+        }
+    }
+
+    private void OnDisable()
+    {
+        infoPanel.SetActive(false);
+    }
+
+    public void ShowDragonInfo(int id)
+    {
+        infoPanel.SetActive(true);
+        nameText.text = dragons[id].name;
+        infoText.text = dragons[id].GetComponent<WanderingDragons>().info;        
+        selectedDragon = dragons[id];
+        if (DragonKeeper.instance.ownedDragons.Contains(selectedDragon) || selectedDragon == dragons[0])
+        {
+            buyButton.interactable = false;
+        }
+        else
+        {
+            buyButton.interactable = true;
+        }
+    }
+
     public void BuyDragon()
     {
-        if(gold.totalGold >= 100)
+        if (gold.totalGold >= selectedDragon.GetComponent<WanderingDragons>().cost)
         {
             buyDragons.Play();
-            Instantiate(dragon1, spawnPoint.transform.position, spawnPoint.transform.rotation);
-            gold.totalGold -= 100;
-            d1.text = "SOLD";
-            d1.transform.parent.GetComponent<Button>().interactable = false;
-            DragonKeeper.instance.dragon1 = dragon1;
-            this.gameObject.SetActive(false);
-        }
-    }
-
-    public void BuyDragon1()
-    {
-        if (gold.totalGold >= 200)
-        {
-            buyDragons.Play();
-            Instantiate(dragon2, spawnPoint.transform.position, spawnPoint.transform.rotation);
-            gold.totalGold -= 200;
-            d2.text = "SOLD";
-            d2.transform.parent.GetComponent<Button>().interactable = false;
-            DragonKeeper.instance.dragon2 = dragon2;
-            this.gameObject.SetActive(false);
-        }
-    }
-
-    public void BuyDragon2()
-    {
-        if (gold.totalGold >= 300)
-        {
-            buyDragons.Play();
-            Instantiate(dragon3, spawnPoint.transform.position, spawnPoint.transform.rotation);
-            gold.totalGold -= 300;
-            d3.text = "SOLD";
-            d3.transform.parent.GetComponent<Button>().interactable = false;
-            DragonKeeper.instance.dragon3 = dragon3;
+            Instantiate(selectedDragon, spawnPoint.transform.position, spawnPoint.transform.rotation);
+            gold.totalGold -= selectedDragon.GetComponent<WanderingDragons>().cost;
+            DragonKeeper.instance.ownedDragons.Add(selectedDragon);
             this.gameObject.SetActive(false);
         }
     }
@@ -88,7 +99,7 @@ public class ShopManager : MonoBehaviour
 
     public void BuyFood(GameObject prefab)
     {
-        if(gold.totalGold >= prefab.GetComponent<FoodPiece>().cost)
+        if (gold.totalGold >= prefab.GetComponent<FoodPiece>().cost)
         {
             buyDragons.Play();
             gold.totalGold -= prefab.GetComponent<FoodPiece>().cost;

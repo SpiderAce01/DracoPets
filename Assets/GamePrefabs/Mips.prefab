@@ -1249,7 +1249,7 @@ GameObject:
   - component: {fileID: 8389678980012186962}
   - component: {fileID: -3408168039610292836}
   m_Layer: 0
-  m_Name: DragonSD_16
+  m_Name: Mips
   m_TagString: Dragon4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1363,6 +1363,7 @@ MonoBehaviour:
   wanderRadius: 7
   wanderTimer: 4
   animRand: 0
+  cost: 300
   faveFoodTag: Fish
   canChoose: 1
   canPlay: 1
@@ -1373,6 +1374,7 @@ MonoBehaviour:
   eating: {fileID: 8300000, guid: f93276ff7133c8a4a8c338dbf6db099c, type: 3}
   roar: {fileID: 8300000, guid: b5241e4159ab6444c84cb38cc5961050, type: 3}
   walk: {fileID: 8300000, guid: af30a93e7b1a31045a7b15cf54ea2978, type: 3}
+  info: Mips is a Coastal Dragon, and loves swimming and eating fish!
 --- !u!195 &8389678980012186962
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -9,12 +9,13 @@ public class GoldUI : MonoBehaviour
 
     void Start()
     {
-        
+
+        gold = PlayerGold.instance;
+        gameObject.GetComponent<Text>().text = gold.totalGold.ToString();
     }
 
     void Update()
     {
-        gold = PlayerGold.instance;
         gameObject.GetComponent<Text>().text = gold.totalGold.ToString();
     }
 }

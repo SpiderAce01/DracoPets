@@ -997,7 +997,7 @@ GameObject:
   - component: {fileID: 6736419801592834404}
   - component: {fileID: -3876077604122541377}
   m_Layer: 0
-  m_Name: DragonSD_01
+  m_Name: Rin
   m_TagString: Dragon2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1087,6 +1087,7 @@ MonoBehaviour:
   wanderRadius: 7
   wanderTimer: 4
   animRand: 0
+  cost: 100
   faveFoodTag: Cheese
   canChoose: 1
   canPlay: 1
@@ -1097,6 +1098,8 @@ MonoBehaviour:
   eating: {fileID: 8300000, guid: f93276ff7133c8a4a8c338dbf6db099c, type: 3}
   roar: {fileID: 8300000, guid: 065d1c23b0c568241b0ede3759cf14ca, type: 3}
   walk: {fileID: 8300000, guid: af30a93e7b1a31045a7b15cf54ea2978, type: 3}
+  info: The Land Dragon Rin loves to play with his food! He loves to poke holes in
+    cheese before eating it!
 --- !u!195 &6736419801592834407
 NavMeshAgent:
   m_ObjectHideFlags: 0
