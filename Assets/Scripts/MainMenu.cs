@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject instructionsPanel;
+    public GameObject quitPanel;
 
     public void Quit()
     {
@@ -25,5 +26,17 @@ public class MainMenu : MonoBehaviour
     public void HideInstructions()
     {
         instructionsPanel.SetActive(false);
+    }
+
+    public void BeginQuit()
+    {
+        quitPanel.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void CancelQuit()
+    {
+        quitPanel.SetActive(false);
+        Time.timeScale = 1;
     }
 }

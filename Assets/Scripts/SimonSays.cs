@@ -24,10 +24,13 @@ public class SimonSays : MonoBehaviour
 
     public Text streakText;
     public Text goldEarnedText;
+    public Text multiDisplay;
+
+    public int multi = 1;
 
     int goldEarned;
 
-    public float timeBetweenNotes;
+    public float timeBetweenNotes; 
 
     //this should be at 1 at the start of the game
     public int currentStreak = 1;
@@ -97,6 +100,8 @@ public class SimonSays : MonoBehaviour
                 playerOrder.Clear();
                 step = 0;
                 currentStreak = 1;
+                multi = 1;
+                multiDisplay.gameObject.SetActive(false);
                 StartCoroutine(FlashButton(2));
             }
             else
@@ -109,9 +114,18 @@ public class SimonSays : MonoBehaviour
                     currentStreak++;
                     playerOrder.Clear();
                     if(PlayerGold.instance != null)
-                    PlayerGold.instance.totalGold += 1;
-                    goldEarned += 1;
+                    PlayerGold.instance.totalGold += 1 * multi;
+                    goldEarned += 1* multi;
                     goldEarnedText.text = "Gold Earned: " + goldEarned;
+                    if(currentStreak % 2 == 0)
+                    {
+                        multi++;
+                        if(multi >= 2)
+                        {
+                            multiDisplay.gameObject.SetActive(true);
+                            multiDisplay.text = "X" + multi + "!";
+                        }
+                    }
                     StartCoroutine(FlashButton(1));
                 }
             }

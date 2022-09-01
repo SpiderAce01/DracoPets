@@ -119,7 +119,6 @@ public class MovePlayer : MonoBehaviour
         if (PlayerPrefs.GetInt("score") >  PlayerPrefs.GetInt("highscore"))
         {
             PlayerPrefs.SetInt("highscore", ScoreTracker.instance.score);
-
         }
 
         deathPanel.SetActive(true);
@@ -131,13 +130,12 @@ public class MovePlayer : MonoBehaviour
         finalScore.text = ScoreTracker.instance.score.ToString() + " M";
         highScoreText.text = PlayerPrefs.GetInt("highscore") + " M";
         rb.velocity = Vector3.zero;
-        goldEarned = ScoreTracker.instance.score / 100;
+        goldEarned = ScoreTracker.instance.score / 100 * 5;
         if (goldEarned < 0) goldEarned = 0;
         goldEarnedText.text = goldEarned.ToString();
 
         if (PlayerGold.instance != null)
             PlayerGold.instance.totalGold += goldEarned;
-        print("A");
     }
 
     void AddFuel()
